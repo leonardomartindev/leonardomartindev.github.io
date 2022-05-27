@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+}
+
+:root {
+  --body: #D8D4C1;
+  --text: #393430;
+  --content: #AA9587;
+
+}
+
+.dark-mode:root {
+  --body: #393430;
+  --text: #AA9587;
+  --content: #6A5D58;
+}
+
+html {
+  background-color: var(--body);
+  font-size: 17px;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+  justify-content: end;
+}
+
+.toggleTheme {
+  width: 5rem;
+  height: 2.2rem;
+  appearance: none;
+  display: inline-block;
+  background-color: var(--text);
+  border-radius: 1.1rem;
+  margin: 1.1rem;
+  cursor: pointer;
+  position: relative;
+  transition: all .3s ease-in-out;
+
+}
+
+.toggleTheme:checked {
+  background-color: var(--body);
+}
+
+.toggleTheme::before {
+  content: "";
+  width: 1.7rem;
+  height: 1.7rem;
+  background-color: var(--body);
+  margin: 4px;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+  position: absolute;
+  position: absolute;
+  transition: all .3s ease-in-out;
+
+}
+
+.toggleTheme:checked::before {
+  transform: translateX(49px);
+  background-color: var(--text);
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 70vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.futureDate {
+  border: none;
+  border-bottom: 2px solid var(--content);
+  background-color: transparent;
+  height: 25px;
+  width: 25vw;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+
+}
+
+.countdown {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 25vw 25vw;
+}
+
+li {
+  margin: 5px;
+  height: 25vh;
+  background-color: var(--content);
+}
+
+ul li>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+ul li>div>span {
+  font-size: 7rem;
+}
+
+footer {
+  width: 100vw;
+  margin: 0;
+}
+
+.curvas {
+  margin-top: -50px;
+  width: 100vw;
+  height: auto;
+}
