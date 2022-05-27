@@ -24,6 +24,7 @@ html {
   background-color: var(--body);
   font-size: 17px;
   overflow: hidden;
+  transition: all .2s ease-in-out;
 }
 
 nav {
@@ -48,7 +49,7 @@ nav {
 }
 
 .toggleTheme:checked {
-  background-color: var(--body);
+  background-color: #D8D4C1;
 }
 
 .toggleTheme::before {
@@ -67,7 +68,7 @@ nav {
 
 .toggleTheme:checked::before {
   transform: translateX(49px);
-  background-color: var(--text);
+  background-color: var(--body);
 }
 
 main {
@@ -114,15 +115,4 @@ ul li>div {
 
 ul li>div>span {
   font-size: 7rem;
-}
-
-footer {
-  width: 100vw;
-  margin: 0;
-}
-
-.curvas {
-  margin-top: -50px;
-  width: 100vw;
-  height: auto;
 }
