@@ -10,13 +10,13 @@ const btn = document.querySelector("button")
     const dataFormatada = new Date(dateInputFormatado)
     const future = new Countdown(dataFormatada)
     const data = document.querySelectorAll(".data-time")
-    let interval = setInterval(showTime, 1000);
-
+    
     function showTime(){
       data.forEach((time, index) => {
         time.innerHTML = future.total[index];      
       });
     }
+    let interval = setInterval(showTime, 1000);
 
 
     
