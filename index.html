@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt_BR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,35 +14,39 @@
     </label>
   </nav>
   <main>
-    <input type="text" class="futureDate">
+    <div class="container-numbers">
+      <input type="date" class="dateInput outputNumber" placeholder="teste">
+    </div>
+    <button class="saveDate">salva</button>
     <ul class="countdown">
       <li class="dias">
         <div>
-          <span>00</span>
+          <span class="data-time">00</span>
           <div>dia(s)</div>
         </div>
       </li>
       <li class="horas">
         <div>
-          <span>00</span>
+          <span class="data-time">00</span>
           <div>hora</div>
         </div>
       </li>
       <li class="minutos">
         <div>
-          <span>00</span>
+          <span class="data-time">00</span>
           <div>min</div>
         </div>
       </li>
       <li class="segundos">
         <div>
-          <span>00</span>
+          <span class="data-time">00</span>
           <div>sec</div>
         </div>
       </li>
     </ul>
   </main>
-  <script src="js/script.js"></script>
-  <script src="js/countdown.js"></script>
+  <script src="js/script.js" type="module"></script>
+  <script src="js/countdown.js" type="module"></script>
+  <script src="js/toggle.js" type="module"></script>
 </body>
 </html>

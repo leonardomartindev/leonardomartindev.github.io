@@ -81,16 +81,23 @@ main {
 
 }
 
-.futureDate {
+.outputNumber {
+
   border: none;
   border-bottom: 2px solid var(--content);
   background-color: transparent;
   height: 25px;
-  width: 25vw;
+  width: 12vw;
   text-decoration: none;
   outline: none;
   text-align: center;
 
+}
+
+.container-numbers {
+
+  display: flex;
+  gap: 12px;
 }
 
 .countdown {
@@ -100,6 +107,8 @@ main {
 }
 
 li {
+  border-radius: 10px;
+  border: solid 3px var(--text);
   margin: 5px;
   height: 25vh;
   background-color: var(--content);
@@ -115,4 +124,13 @@ ul li>div {
 
 ul li>div>span {
   font-size: 7rem;
+}
+
+button {
+  background-color: var(--content);
+  border: none;
+  padding: 10px;
+  color: var(--text);
+  border-radius: 25%;
+  cursor: pointer;
 }
