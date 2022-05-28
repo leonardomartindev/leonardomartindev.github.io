@@ -13,11 +13,16 @@ btn.addEventListener("click", function(){
 
   function showTime(){
     data.forEach((time, index) => {
+      limpa()
       time.innerHTML = future.total[index];
     });
   }
 
-  
+  function limpa(){
+    data.forEach((time, index) => {
+      clearInterval(interval)
+    })
+  }
   var interval = setInterval(showTime, 1000);
   
 })
