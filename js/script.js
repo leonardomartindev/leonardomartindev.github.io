@@ -1,6 +1,7 @@
 import Countdown from "./countdown.js";
 
 const btn = document.querySelector("button")
+const data = document.querySelectorAll(".data-time")
 
 
   btn.addEventListener("click", function(){
@@ -9,15 +10,14 @@ const btn = document.querySelector("button")
 
     const dataFormatada = new Date(dateInputFormatado)
     const future = new Countdown(dataFormatada)
-    const data = document.querySelectorAll(".data-time")
     
-    function showTime(){
-      data.forEach((time, index) => {
-        time.innerHTML = future.total[index];      
-      });
-    }
-    let interval = setInterval(showTime, 1000);
 
-
-    
+    let interval = setInterval(function(){
+      interval
+        data.forEach((time, index) => {
+          time.innerHTML = future.total[index];    
+        });
+      }, 1000);
+      
   })
+
