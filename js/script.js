@@ -5,8 +5,6 @@ const limpa = document.querySelector(".limpa");
 const data = document.querySelectorAll(".data-time");
 const input = document.querySelector(".dateInput");
 
-console.log(data)
-
 criaTimer.addEventListener("click", function(){
   input.disabled = true
 
