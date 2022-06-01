@@ -82,7 +82,6 @@ main {
 }
 
 .outputNumber {
-
   border: none;
   border-bottom: 2px solid var(--content);
   background-color: transparent;
@@ -91,11 +90,9 @@ main {
   text-decoration: none;
   outline: none;
   text-align: center;
-
 }
 
 .container-numbers {
-
   display: flex;
   gap: 12px;
 }
@@ -128,7 +125,6 @@ ul li>div>span {
 
 .saveDate {
   width: 10vw;
-
   background-color: var(--content);
   border: 2px solid #393430;
   padding: 10px;
@@ -149,5 +145,46 @@ ul li>div>span {
 
 .containerBtn {
   display: flex;
-  gap: 15%;
+  gap: 2%;
+  width: 100vw;
+  justify-content: center;
+}
+
+.containerBtn button {
+  width: 20vw;
+}
+
+@media (max-width: 770px) {
+  * {
+    font-size: 13px;
+  }
+
+  .outputNumber {
+    border: none;
+    border-bottom: 3px solid var(--content);
+    background-color: transparent;
+    height: 32px;
+    width: 22vw;
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+  }
+
+  .containerBtn button {
+    display: flex;
+    gap: 15%;
+    width: 30vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul li>div>span {
+    font-size: 5rem;
+  }
+
+  .countdown {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 30vw 30vw;
+  }
 }
