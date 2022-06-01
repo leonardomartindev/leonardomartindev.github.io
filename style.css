@@ -126,11 +126,28 @@ ul li>div>span {
   font-size: 7rem;
 }
 
-button {
+.saveDate {
+  width: 10vw;
+
   background-color: var(--content);
   border: 2px solid #393430;
   padding: 10px;
   color: var(--text);
   border-radius: 50px;
   cursor: pointer;
+}
+
+.limpa {
+  width: 10vw;
+  background-color: var(--content);
+  border: 2px solid #393430;
+  padding: 10px;
+  color: var(--text);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.containerBtn {
+  display: flex;
+  gap: 15%;
 }
