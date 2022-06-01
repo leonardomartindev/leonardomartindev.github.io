@@ -185,6 +185,6 @@ ul li>div>span {
   .countdown {
     list-style: none;
     display: grid;
-    grid-template-columns: 30vw 30vw;
+    grid-template-columns: 40vw 40vw;
   }
 }
