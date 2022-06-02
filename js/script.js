@@ -8,7 +8,20 @@ const input = document.querySelector(".dateInput");
 criaTimer.addEventListener("click", function(){
   input.disabled = true
 
-  let dateInput = document.querySelector(".dateInput").value;
+  let date = new Date()
+  let ano = date.getFullYear()
+  let mes = date.getMonth() + 1
+  let mesF = mes < 10 ? "0" + mes : mes
+  let dia = date.getDate()
+  let diaF = dia < 10 ? "0" + dia : dia
+  let formata = `${ano}-${mesF}-${diaF}`
+  if(input.value <= formata){
+    window.alert("Data deve ser maior que o dia atual")
+    input.disabled = false
+  } else{
+
+    
+    let dateInput = document.querySelector(".dateInput").value;
   const dateInputFormatado = `"${dateInput}"`;
   const dataFormatada = new Date(dateInputFormatado);
   const future = new Countdown(dataFormatada);
@@ -17,7 +30,7 @@ criaTimer.addEventListener("click", function(){
     input.disabled = false
     return
   }
-
+  
   function showTime(){
     data.forEach((time, index) => {
       time.classList.add("cont");
@@ -26,9 +39,9 @@ criaTimer.addEventListener("click", function(){
   }
   
   let intervalo = setInterval(showTime, 1000); 
-
+  
   showTime();
-
+  
   limpa.addEventListener("click", function(){
     input.disabled = false
     clearInterval(intervalo);
@@ -38,6 +51,10 @@ criaTimer.addEventListener("click", function(){
       timer.classList.remove("cont");
     });
   });
-
+}
 });
+
+
+  
+  
 
